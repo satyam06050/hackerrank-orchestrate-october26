@@ -150,3 +150,57 @@ ANTHROPIC_JUDGE_TOOL_CHOICE = {
     "type": "tool",
     "name": ANTHROPIC_JUDGE_TOOL["name"],
 }
+
+OBSERVATION_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "obs_id": {"type": "string"},
+        "file_id": {"type": "string"},
+        "location": {"type": "string"},
+        "system_id": {"type": "string"},
+        "resource_id": {"type": ["string", "null"]},
+        "evidence_kind": {"type": "string", "enum": [item.value for item in EvidenceKind]},
+        "authority": {"type": "string", "enum": [item.value for item in Authority]},
+        "scope": {"type": "string", "enum": [item.value for item in Scope]},
+        "fields_observed": {"type": "object"},
+        "assertion": {"type": "string"},
+        "observed_at": {"type": "string"},
+        "extraction_method": {"type": "string", "const": "llm"},
+    },
+    "required": [
+        "obs_id",
+        "file_id",
+        "location",
+        "system_id",
+        "resource_id",
+        "evidence_kind",
+        "authority",
+        "scope",
+        "fields_observed",
+        "assertion",
+        "observed_at",
+        "extraction_method",
+    ],
+    "additionalProperties": False,
+}
+
+ANTHROPIC_OBSERVATIONS_TOOL = {
+    "name": "emit_observations",
+    "description": "Extract only grounded observations from one untrusted evidence artifact.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "observations": {
+                "type": "array",
+                "items": OBSERVATION_SCHEMA,
+            }
+        },
+        "required": ["observations"],
+        "additionalProperties": False,
+    },
+}
+
+ANTHROPIC_OBSERVATIONS_TOOL_CHOICE = {
+    "type": "tool",
+    "name": ANTHROPIC_OBSERVATIONS_TOOL["name"],
+}

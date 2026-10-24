@@ -50,7 +50,7 @@ class UsageLogger:
         output_tokens: int,
         cache_read_tokens: int,
         cache_write_tokens: int,
-        cost: Decimal | int | float | str,
+        cost: Decimal | int | float | str | None,
     ) -> dict[str, Any]:
         token_values = {
             "input_tokens": input_tokens,
@@ -69,7 +69,7 @@ class UsageLogger:
             "case_id": case_id,
             "purpose": purpose,
             **token_values,
-            "cost": str(_decimal_cost(cost)),
+            "cost": str(_decimal_cost(cost)) if cost is not None else None,
         }
         line = json.dumps(entry, ensure_ascii=False, separators=(",", ":")) + "\n"
         self.path.parent.mkdir(parents=True, exist_ok=True)
@@ -87,6 +87,8 @@ def _empty_totals() -> dict[str, Any]:
         "cache_read_tokens": 0,
         "cache_write_tokens": 0,
         "cost": Decimal("0"),
+        "cost_known_calls": 0,
+        "cost_unknown_calls": 0,
     }
 
 
@@ -94,17 +96,28 @@ def _add_entry(totals: dict[str, Any], entry: dict[str, Any]) -> None:
     totals["calls"] += 1
     for field in ("input_tokens", "output_tokens", "cache_read_tokens", "cache_write_tokens"):
         totals[field] += int(entry[field])
-    totals["cost"] += _decimal_cost(entry["cost"])
+    if entry.get("cost") is None:
+        totals["cost_unknown_calls"] += 1
+    else:
+        totals["cost"] += _decimal_cost(entry["cost"])
+        totals["cost_known_calls"] += 1
 
 
 def _serialize_totals(totals: dict[str, Any]) -> dict[str, Any]:
     calls = totals["calls"]
-    result = {**totals, "cost": str(totals["cost"])}
+    result = {
+        **totals,
+        "cost": str(totals["cost"]) if totals["cost_unknown_calls"] == 0 else None,
+    }
     result["total_tokens"] = totals["input_tokens"] + totals["output_tokens"]
     result["average_input_tokens_per_call"] = totals["input_tokens"] / calls if calls else 0
     result["average_output_tokens_per_call"] = totals["output_tokens"] / calls if calls else 0
     result["average_tokens_per_call"] = result["total_tokens"] / calls if calls else 0
-    result["average_cost_per_call"] = str(totals["cost"] / calls) if calls else "0"
+    result["average_cost_per_call"] = (
+        str(totals["cost"] / calls)
+        if calls and totals["cost_unknown_calls"] == 0
+        else None
+    )
     return result
 
 
