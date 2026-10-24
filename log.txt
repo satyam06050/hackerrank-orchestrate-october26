@@ -61,3 +61,46 @@ branch=main
 repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+## [2026-10-24 23:41:30 UTC] Add canonical schema and contract tests
+
+User Prompt (verbatim, secrets redacted):
+Create code/schema.py. Nothing else re-declares these values; prompts, plan builder,
+validator, and writer all import from here.
+
+Contents:
+- OUTPUT_COLUMNS, STATUSES, PHASES
+- ALLOWED = the exact (phase, operation, state) triples from the contract table
+- OPERATION_ORDER per phase as constant lists, copied from the contract table order
+  (not alphabetical)
+- Observation dataclass: obs_id, file_id, location, system_id, resource_id|None,
+  evidence_kind, authority, scope, fields_observed, assertion, observed_at,
+  extraction_method
+- Enums for evidence_kind (TABLE_SNAPSHOT, CONFIG, EXPORT_MANIFEST, EVENT, SCREENSHOT,
+  DOCUMENT, IDENTITY_CHANGE), authority (AUTHORITATIVE, CORROBORATING, CLAIM), scope
+  (full_table, partial, event, visible_region, export_listed)
+- State enum: PRESENT, ABSENT, REDACTED, ANONYMIZED, ACTIVE, DISABLED, BLOCKED, UNKNOWN,
+  CONFLICT
+- Judge tool schema (forced tool use) with item, link (yes|no|unsure), rule_id, citation.
+  It must expose NO field for final steps or status.
+
+Add code/test_schema.py (no third-party deps). Tests: triples match the contract table
+exactly; operation order lists contain every operation exactly once; judge schema has no
+status or steps field.
+
+Verify: run the tests and show output. Then stop.
+
+Agent Response Summary:
+Created the canonical schema module with contract output constants, allowed operation/state triples, phase-specific operation order, typed evidence/state enums, an Observation dataclass, and a strict judge tool schema plus forced tool choice. Added standard-library unit tests covering the contract triples, operation coverage, and judge tool field restrictions. All three tests passed.
+
+Actions:
+* Added code/schema.py and code/test_schema.py.
+* Ran `python -m unittest discover -s code -p test_schema.py -v`.
+* Committed only the new schema, test, and required turn log; left earlier unrelated README/docs changes unstaged.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
