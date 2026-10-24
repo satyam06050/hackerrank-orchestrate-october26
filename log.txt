@@ -1,0 +1,63 @@
+## [2026-10-24 23:34:11 UTC] SESSION START
+
+tool=Codex
+model=GPT-6
+Repo Root: C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+Branch: $branch
+Worktree: main
+Parent Agent: none
+Language: py
+Time Remaining: not configured
+## [2026-10-24 23:35:00 UTC] SESSION START METADATA CORRECTION
+
+The prior SESSION START entry recorded Branch as a literal placeholder because PowerShell did not interpolate it. The exact current branch is main.
+## [2026-10-25 05:05:00+05:30] SESSION START BRANCH CORRECTION
+
+Branch=main
+## [2026-10-24 23:34:53 UTC] Scaffold Python package and verify submission setup
+
+User Prompt (verbatim, secrets redacted):
+Read the problem statement, README, and AGENTS.md (if present) in full. Confirm the\
+submission contract: output.csv columns, code.zip contents, evaluation/ files.
+
+Then scaffold code/ as a Python package. Do NOT write any model-calling logic, retrieval\
+logic, or prompt content yet.
+
+Create:
+
+- code/config.py: single source of truth for paths and model settings. API key from env\
+  only, optionally hydrated from a git-ignored code/.env; real env vars win. Constants: \
+  PRIMARY_MODEL, CHEAP_MODEL, TEMPERATURE=0.0, MAX_TOKENS, MAX_RETRIES, DATASET_DIR,\
+  CACHE_DIR, PROMPT_VERSION. Note in a docstring that evidence paths are relative to\
+  DATASET_DIR.
+- code/requirements.txt with pinned versions.
+- code/.env.example
+- .gitignore at repo root: .env, venvs, **pycache**, dataset/, cache dirs, generated\
+  output.csv.
+- code/README.md with headings only: Architecture, Design Tradeoffs, Setup, Environment\
+  Variables, Run Commands, Evaluation, Known Limitations.
+
+Do NOT name any package "code" at a level that shadows the stdlib `code` module in a way\
+that breaks `import pdb`; verify `python -c "import pdb"` from the repo root.
+
+Run `git init`, make an initial commit, and confirm `git log` shows it. From now on, every\
+prompt ends with a commit.
+
+Verify: python -c "import config"; git check-ignore reports .env and **pycache** ignored;\
+git log shows one commit. git and push to github.Then stop.
+
+Agent Response Summary:
+Read AGENTS.md, problem_statement.md, and README.md and confirmed the root output schema and archive evaluation-report requirements. Added the requested environment, configuration, requirements, ignore, and headings-only README scaffold; kept the importable package named ghost_audit under code/ and used a root config shim to avoid shadowing stdlib code. Verification passed; the repository already had Git initialized and one existing commit, so this turn adds a scaffold commit rather than reinitializing the existing remote checkout.
+
+Actions:
+* Added code/config.py, code/requirements.txt, code/.env.example, code/README.md, code/ghost_audit/__init__.py, root config.py, .gitignore, and updated log.txt.
+* Ran Python config and pdb import checks and Git ignore checks.
+* Committed scaffold changes; attempted GitHub push.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

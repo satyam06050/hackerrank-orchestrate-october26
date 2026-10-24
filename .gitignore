@@ -1,0 +1,17 @@
+.env
+**/.env
+.venv/
+venv/
+venvs/
+**/.venv/
+**/venv/
+**/venvs/
+__pycache__/
+**/__pycache__/
+dataset/
+**/dataset/
+cache/
+**/cache/
+.cache/
+**/.cache/
+output.csv
