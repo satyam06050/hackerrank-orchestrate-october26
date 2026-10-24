@@ -1,0 +1,1813 @@
+{
+  "evidence_01": {
+    "kind": "EVENT",
+    "path": "evidence/logs/service_events_ap_south_20260915.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "dns_cache",
+      "export_service",
+      "integration_service",
+      "log_router",
+      "queue_consumer",
+      "search_service",
+      "secret_agent",
+      "security_service",
+      "support_platform",
+      "webhook_delivery"
+    ],
+    "tables_covered": [],
+    "observation_count": 104,
+    "errors": []
+  },
+  "evidence_02": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260917.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 41,
+    "errors": []
+  },
+  "evidence_03": {
+    "kind": "DOCUMENT",
+    "path": "evidence/records/customer_account_handover_20261001.txt",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_04": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/account_admin_console_20260926.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_05": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_read_replica_20260921.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_read_replica"
+    ],
+    "observation_count": 61,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 30,
+      "customer_data_read_replica": 31
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_06": {
+    "kind": "EVENT",
+    "path": "evidence/logs/structured_service_events_eu_west_20260918.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "circuit_breaker",
+      "dns_cache",
+      "export_service",
+      "feature_flags",
+      "integration_service",
+      "log_router",
+      "search_service",
+      "secret_agent",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 112,
+    "errors": []
+  },
+  "evidence_07": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260913.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 30,
+    "errors": []
+  },
+  "evidence_08": {
+    "kind": "EVENT",
+    "path": "evidence/logs/search_index_diagnostic_20260906.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "search_index_service"
+    ],
+    "tables_covered": [],
+    "observation_count": 36,
+    "errors": []
+  },
+  "evidence_09": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/search_index_inspector_20260901.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_10": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_read_replica_20260827.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_read_replica"
+    ],
+    "observation_count": 59,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 29,
+      "customer_data_read_replica": 30
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_11": {
+    "kind": "EVENT",
+    "path": "evidence/logs/syslog_archive_us_east_20260824.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 118,
+    "errors": []
+  },
+  "evidence_12": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260819.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 29,
+    "errors": []
+  },
+  "evidence_13": {
+    "kind": "CONFIG",
+    "path": "evidence/records/connector_configurations_20260812.json",
+    "parse_status": "error",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 39,
+    "errors": [
+      "39 CONFIG records have no enabled flag"
+    ]
+  },
+  "evidence_14": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/connector_management_console_20260807.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_15": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_read_replica_20260802.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_read_replica"
+    ],
+    "observation_count": 49,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 24,
+      "customer_data_read_replica": 25
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_16": {
+    "kind": "EVENT",
+    "path": "evidence/logs/application_trace_ap_northeast_20260730.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 93,
+    "errors": []
+  },
+  "evidence_17": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260725.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 36,
+    "errors": []
+  },
+  "evidence_18": {
+    "kind": "DOCUMENT",
+    "path": "evidence/documents/account_history_report_20260718.pdf",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_19": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/analytics_profile_view_20260713.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_20": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_read_replica_20260708.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_read_replica"
+    ],
+    "observation_count": 63,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 31,
+      "customer_data_read_replica": 32
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_21": {
+    "kind": "EVENT",
+    "path": "evidence/logs/operations_stream_eu_central_20260705.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 128,
+    "errors": []
+  },
+  "evidence_22": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260630.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 71,
+    "errors": []
+  },
+  "evidence_23": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/customer_export_console_20260618.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_24": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_read_replica_20260613.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_read_replica"
+    ],
+    "observation_count": 50,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 24,
+      "customer_data_read_replica": 26
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_25": {
+    "kind": "EVENT",
+    "path": "evidence/logs/cloud_runtime_export_us_west_20260608.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 128,
+    "errors": []
+  },
+  "evidence_26": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260605.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 32,
+    "errors": []
+  },
+  "evidence_27": {
+    "kind": "DOCUMENT",
+    "path": "evidence/documents/legal_retention_register_20260529.pdf",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_28": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/support_ticket_console_20260524.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_29": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_regional_replicas_20260519.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_replica_ap_south",
+      "customer_data_replica_eu_west"
+    ],
+    "observation_count": 85,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 28,
+      "customer_data_replica_ap_south": 29,
+      "customer_data_replica_eu_west": 28
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_30": {
+    "kind": "EVENT",
+    "path": "evidence/logs/service_events_sa_east_20260516.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "dns_cache",
+      "integration_service",
+      "log_router",
+      "queue_consumer",
+      "search_service",
+      "secret_agent",
+      "security_service",
+      "support_platform",
+      "webhook_delivery"
+    ],
+    "tables_covered": [],
+    "observation_count": 110,
+    "errors": []
+  },
+  "evidence_31": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260511.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 74,
+    "errors": []
+  },
+  "evidence_32": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/backup_restore_console_20260429.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_33": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_regional_replicas_20260424.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_replica_ap_south",
+      "customer_data_replica_eu_west"
+    ],
+    "observation_count": 89,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 29,
+      "customer_data_replica_ap_south": 29,
+      "customer_data_replica_eu_west": 31
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_34": {
+    "kind": "EVENT",
+    "path": "evidence/logs/structured_service_events_ca_central_20260419.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "circuit_breaker",
+      "dns_cache",
+      "export_service",
+      "feature_flags",
+      "integration_service",
+      "log_router",
+      "search_service",
+      "secret_agent",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 136,
+    "errors": []
+  },
+  "evidence_35": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260416.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 28,
+    "errors": []
+  },
+  "evidence_36": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/customer_export_manifest_20260409.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 46,
+    "errors": []
+  },
+  "evidence_37": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/security_audit_explorer_20260905.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_38": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_regional_replicas_20260330.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_replica_ap_south",
+      "customer_data_replica_eu_west"
+    ],
+    "observation_count": 85,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 28,
+      "customer_data_replica_ap_south": 29,
+      "customer_data_replica_eu_west": 28
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_39": {
+    "kind": "EVENT",
+    "path": "evidence/logs/syslog_archive_ap_southeast_20260325.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 114,
+    "errors": []
+  },
+  "evidence_40": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260322.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "export_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 31,
+    "errors": []
+  },
+  "evidence_41": {
+    "kind": "EVENT",
+    "path": "evidence/logs/notification_delivery_20260315.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "downstream_delivery_service"
+    ],
+    "tables_covered": [],
+    "observation_count": 39,
+    "errors": []
+  },
+  "evidence_42": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/deleted_account_reference_20260310.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_43": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_reporting_replica_20260305.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_reporting_replica"
+    ],
+    "observation_count": 51,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 25,
+      "customer_data_reporting_replica": 26
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_44": {
+    "kind": "EVENT",
+    "path": "evidence/logs/application_trace_eu_north_20260302.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 125,
+    "errors": []
+  },
+  "evidence_45": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260223.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 75,
+    "errors": []
+  },
+  "evidence_46": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/object_storage_browser_20260213.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_47": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_reporting_replica_20260208.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "legal_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "customer_data_primary",
+      "customer_data_reporting_replica"
+    ],
+    "observation_count": 49,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_primary": 24,
+      "customer_data_reporting_replica": 25
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_48": {
+    "kind": "EVENT",
+    "path": "evidence/logs/operations_stream_me_central_20260203.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 103,
+    "errors": []
+  },
+  "evidence_49": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260131.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 34,
+    "errors": []
+  },
+  "evidence_50": {
+    "kind": "EVENT",
+    "path": "evidence/records/security_audit_ledger_20261001.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "security_service"
+    ],
+    "tables_covered": [],
+    "observation_count": 20,
+    "errors": []
+  },
+  "evidence_51": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_data_snapshot_bundle_20260915.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "identity_service",
+      "security_service"
+    ],
+    "tables_covered": [],
+    "observation_count": 4,
+    "errors": []
+  },
+  "evidence_52": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_failover_replica_20260920.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "identity_service",
+      "security_service"
+    ],
+    "tables_covered": [
+      "customer_data_failover_replica",
+      "customer_data_primary"
+    ],
+    "observation_count": 32,
+    "errors": [],
+    "table_row_counts": {
+      "customer_data_failover_replica": 16,
+      "customer_data_primary": 16
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_53": {
+    "kind": "EVENT",
+    "path": "evidence/logs/cloud_runtime_export_af_south_20260930.log",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 305,
+    "errors": []
+  },
+  "evidence_54": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_accounts_failover_replica_20260902.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service"
+    ],
+    "tables_covered": [
+      "customer_profiles_failover_replica",
+      "customer_profiles_primary"
+    ],
+    "observation_count": 7,
+    "errors": [],
+    "table_row_counts": {
+      "customer_profiles_failover_replica": 4,
+      "customer_profiles_primary": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_55": {
+    "kind": "DOCUMENT",
+    "path": "evidence/documents/security_retention_extract.pdf",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_56": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/records/customer_analytics_report_20260907.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "analytics_identity_store"
+    ],
+    "tables_covered": [],
+    "observation_count": 2,
+    "errors": []
+  },
+  "evidence_57": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_search_primary_20260910.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "search_service"
+    ],
+    "tables_covered": [
+      "search_documents_primary"
+    ],
+    "observation_count": 3,
+    "errors": [],
+    "table_row_counts": {
+      "search_documents_primary": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_58": {
+    "kind": "DOCUMENT",
+    "path": "evidence/documents/delivery_correction_attachment.pdf",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_59": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/customer_export_jobs_20260914.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "user_export_store"
+    ],
+    "tables_covered": [],
+    "observation_count": 2,
+    "errors": []
+  },
+  "evidence_60": {
+    "kind": "SCREENSHOT",
+    "path": "evidence/images/marketing_profile_console.png",
+    "parse_status": "ok",
+    "systems_covered": [],
+    "tables_covered": [],
+    "observation_count": 0,
+    "errors": []
+  },
+  "evidence_61": {
+    "kind": "EVENT",
+    "path": "evidence/logs/support_replica.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "attachment_preview",
+      "queue_consumer",
+      "support_replica"
+    ],
+    "tables_covered": [],
+    "observation_count": 10,
+    "errors": []
+  },
+  "evidence_62": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260129_114459.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 29,
+    "errors": []
+  },
+  "evidence_63": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260213.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 24,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 1,
+      "customer_analytics_profiles": 3,
+      "customer_exports": 0,
+      "customer_profiles": 2,
+      "customer_search_documents": 4,
+      "security_audit_records": 4,
+      "snapshot_scope": 7,
+      "support_records": 2
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_64": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260218_083911.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 54,
+    "errors": []
+  },
+  "evidence_65": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260228_103637.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 27,
+    "errors": []
+  },
+  "evidence_66": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260310.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 31,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 4,
+      "customer_analytics_profiles": 5,
+      "customer_exports": 1,
+      "customer_profiles": 0,
+      "customer_search_documents": 7,
+      "security_audit_records": 2,
+      "snapshot_scope": 8,
+      "support_records": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_67": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260310_061801.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "readback_collector"
+    ],
+    "tables_covered": [],
+    "observation_count": 4,
+    "errors": []
+  },
+  "evidence_68": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260320_072349.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 25,
+    "errors": []
+  },
+  "evidence_69": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260404.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 26,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 2,
+      "customer_analytics_profiles": 4,
+      "customer_exports": 1,
+      "customer_profiles": 0,
+      "customer_search_documents": 5,
+      "security_audit_records": 3,
+      "snapshot_scope": 8,
+      "support_records": 2
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_70": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260414_054007.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 50,
+    "errors": []
+  },
+  "evidence_71": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260429_083222.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 28,
+    "errors": []
+  },
+  "evidence_72": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260504.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 28,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 4,
+      "customer_analytics_profiles": 3,
+      "customer_exports": 0,
+      "customer_profiles": 1,
+      "customer_search_documents": 6,
+      "security_audit_records": 3,
+      "snapshot_scope": 7,
+      "support_records": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_73": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260509_104353.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 68,
+    "errors": []
+  },
+  "evidence_74": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260514_114454.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 25,
+    "errors": []
+  },
+  "evidence_75": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260524.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 32,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 4,
+      "customer_analytics_profiles": 6,
+      "customer_exports": 1,
+      "customer_profiles": 0,
+      "customer_search_documents": 5,
+      "security_audit_records": 4,
+      "snapshot_scope": 8,
+      "support_records": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_76": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260529_074313.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 48,
+    "errors": []
+  },
+  "evidence_77": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260603_083457.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 27,
+    "errors": []
+  },
+  "evidence_78": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260618.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 26,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 0,
+      "connector_subscriptions": 1,
+      "customer_analytics_profiles": 4,
+      "customer_exports": 1,
+      "customer_profiles": 2,
+      "customer_search_documents": 6,
+      "security_audit_records": 2,
+      "snapshot_scope": 7,
+      "support_records": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_79": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260623_053726.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 60,
+    "errors": []
+  },
+  "evidence_80": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260628_062556.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 24,
+    "errors": []
+  },
+  "evidence_81": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260703.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 32,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 2,
+      "customer_analytics_profiles": 5,
+      "customer_exports": 1,
+      "customer_profiles": 0,
+      "customer_search_documents": 5,
+      "security_audit_records": 5,
+      "snapshot_scope": 8,
+      "support_records": 5
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_82": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260713_093359.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 54,
+    "errors": []
+  },
+  "evidence_83": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260718_104335.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 29,
+    "errors": []
+  },
+  "evidence_84": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260723.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 34,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 4,
+      "customer_analytics_profiles": 5,
+      "customer_exports": 1,
+      "customer_profiles": 1,
+      "customer_search_documents": 7,
+      "security_audit_records": 2,
+      "snapshot_scope": 8,
+      "support_records": 5
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_85": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260728_054417.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 46,
+    "errors": []
+  },
+  "evidence_86": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260807_074104.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 23,
+    "errors": []
+  },
+  "evidence_87": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260817.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 27,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 1,
+      "connector_subscriptions": 1,
+      "customer_analytics_profiles": 4,
+      "customer_exports": 1,
+      "customer_profiles": 1,
+      "customer_search_documents": 5,
+      "security_audit_records": 2,
+      "snapshot_scope": 8,
+      "support_records": 4
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_88": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260822_103910.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "export_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 46,
+    "errors": []
+  },
+  "evidence_89": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260901_053316.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 23,
+    "errors": []
+  },
+  "evidence_90": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260905.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 1,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 0,
+      "connector_subscriptions": 0,
+      "customer_analytics_profiles": 0,
+      "customer_exports": 0,
+      "customer_profiles": 0,
+      "customer_search_documents": 0,
+      "security_audit_records": 0,
+      "snapshot_scope": 1,
+      "support_records": 0
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_91": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260911_074253.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 62,
+    "errors": []
+  },
+  "evidence_92": {
+    "kind": "EXPORT_MANIFEST",
+    "path": "evidence/records/service_resource_export_20260915_114455.json",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 36,
+    "errors": []
+  },
+  "evidence_93": {
+    "kind": "TABLE_SNAPSHOT",
+    "path": "evidence/databases/customer_data_inventory_20260916.sql",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "export_service",
+      "integration_service",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [
+      "backup_restore_entries",
+      "connector_subscriptions",
+      "customer_analytics_profiles",
+      "customer_exports",
+      "customer_profiles",
+      "customer_search_documents",
+      "security_audit_records",
+      "snapshot_scope",
+      "support_records"
+    ],
+    "observation_count": 25,
+    "errors": [],
+    "table_row_counts": {
+      "backup_restore_entries": 2,
+      "connector_subscriptions": 2,
+      "customer_analytics_profiles": 2,
+      "customer_exports": 1,
+      "customer_profiles": 1,
+      "customer_search_documents": 3,
+      "security_audit_records": 3,
+      "snapshot_scope": 8,
+      "support_records": 3
+    },
+    "scope": "partial",
+    "scope_decision_reason": "The SQL file contains no explicit complete/full-dump marker or covered-versus-total row count; only the rows inserted in this file are treated as captured."
+  },
+  "evidence_94": {
+    "kind": "EVENT",
+    "path": "evidence/logs/resource_lookup_trace_20260926_103856.log",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "analytics_platform",
+      "backup_service",
+      "integration_service",
+      "readback_collector",
+      "search_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 58,
+    "errors": []
+  },
+  "system_activity.csv": {
+    "kind": "EVENT",
+    "path": "system_activity.csv",
+    "parse_status": "ok",
+    "systems_covered": [
+      "account_service",
+      "backup_service",
+      "data_catalog",
+      "deletion_worker",
+      "export_service",
+      "integration_service",
+      "notification_service",
+      "privacy_intake",
+      "profile_service",
+      "security_service",
+      "support_platform"
+    ],
+    "tables_covered": [],
+    "observation_count": 4011,
+    "errors": []
+  },
+  "user_audit_log.csv": {
+    "kind": "IDENTITY_CHANGE",
+    "path": "user_audit_log.csv",
+    "parse_status": "ok",
+    "systems_covered": [
+      "identity_service"
+    ],
+    "tables_covered": [],
+    "observation_count": 306,
+    "errors": []
+  }
+}

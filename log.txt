@@ -171,3 +171,44 @@ branch=main
 repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+## [2026-10-24 23:51:13 UTC] Add deterministic evidence extraction and registry
+
+User Prompt (verbatim, secrets redacted):
+Create code/extract/deterministic.py. No model calls.
+
+For every SQL, log, and JSON file in the manifest, emit Observations per schema.py:
+- SQL: load into in-memory sqlite3; one observation per row, keeping table name, user_id,
+  resource_id, fields. evidence_kind=TABLE_SNAPSHOT, authority=AUTHORITATIVE. Decide
+  scope=full_table only if the file itself shows evidence of being a complete dump;
+  otherwise partial. Record your reasoning per file.
+- JSON: connector/config files become CONFIG observations with the enabled flag;
+  exports become EXPORT_MANIFEST with export_listed scope.
+- Logs: parse lines into EVENT observations (authority=CLAIM).
+- system_activity.csv rows become EVENT observations; user_audit_log.csv rows become
+  IDENTITY_CHANGE observations.
+- observed_at comes from evidence_files.csv capture time (for files) or the event time.
+
+Write source_registry.json: per file {kind, parse_status, systems_covered, tables_covered,
+observation_count, errors}. Build must FAIL (non-zero exit) if any file has
+parse_status != ok.
+
+Create code/extract/inspect_registry.py printing the registry and, per SQL file, the table
+names, row counts, and chosen scope. Run it and show me the SQL scope decisions and any
+file that parsed to zero observations. push to github .Then stop.
+
+Agent Response Summary:
+Added deterministic SQLite, log, and JSON extraction into the repository Observation schema, plus activity/audit CSV observations and a registry inspector. The registry records all manifest sources and the two CSV event sources. The extraction build exits nonzero as requested because evidence_13 is classified as CONFIG by filename but its 39 records do not contain the required enabled field. All SQL snapshots lack explicit completeness metadata, so each is partial with per-file rationale. The inspector reports 16 zero-observation PDF/PNG/TXT files, whose content extraction is outside this deterministic pass.
+
+Actions:
+* Added code/extract/deterministic.py and code/extract/inspect_registry.py.
+* Generated code/extract/source_registry.json.
+* Ran deterministic extraction (exit 1 on evidence_13 semantic parse error) and registry inspection (exit 0).
+* Committed and pushed the extraction code and registry.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
