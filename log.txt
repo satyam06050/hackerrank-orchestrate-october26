@@ -139,3 +139,35 @@ branch=main
 repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+## [2026-10-24 23:46:39 UTC] Add API preflight and thread-safe usage logger
+
+User Prompt (verbatim, secrets redacted):
+Create code/preflight_api.py. Key via config.py only, never printed. Print models.list()
+in full; assert PRIMARY_MODEL and CHEAP_MODEL are present, else exit 3. Make one real
+messages.create call with max_tokens 256, the judge tool from schema.py, forced
+tool_choice, on synthetic non-dataset text. Print stop_reason, usage, and the parsed tool
+input. Assert exactly one tool_use block that validates against the schema. Exit 0 only if
+all pass.
+
+Also create code/usage_log.py: a thread-safe logger recording provider, model, case_id,
+purpose, input/output tokens, cache read/write tokens, and cost per call to a JSONL file,
+plus an aggregator. This feeds evaluation/usage_report.md later.
+
+Run preflight and show full output. Then stop.
+
+Agent Response Summary:
+Added an Anthropic Messages API preflight using the key and model settings through config.py and an Anthropic-compatible judge tool/forced choice adapter in schema.py. Added a thread-safe JSONL usage logger with provider/model aggregation, token/cost totals, and per-call averages. The preflight could not reach models.list() or make a real API request because config.API_KEY is empty; it exited 2 without printing any key. Anthropic SDK 2.2.0 was pinned but not installed.
+
+Actions:
+* Added code/preflight_api.py and code/usage_log.py; extended the judge tool adapter in code/schema.py; pinned anthropic==2.2.0 in code/requirements.txt.
+* Ran `python code/preflight_api.py`; it reported a missing configured key and exit code 2.
+* Imported code/usage_log.py successfully.
+* Committed these changes and the turn log.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

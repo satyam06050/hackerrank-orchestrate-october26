@@ -138,3 +138,15 @@ JUDGE_TOOL_CHOICE = {
     "type": "function",
     "function": {"name": "judge_evidence_item"},
 }
+
+# Anthropic Messages API form of the same canonical judge input schema.
+ANTHROPIC_JUDGE_TOOL = {
+    "name": "judge_evidence_item",
+    "description": "Judge one candidate evidence item link and deletion-rule match.",
+    "input_schema": _JUDGE_PARAMETERS,
+}
+
+ANTHROPIC_JUDGE_TOOL_CHOICE = {
+    "type": "tool",
+    "name": ANTHROPIC_JUDGE_TOOL["name"],
+}
