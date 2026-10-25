@@ -311,3 +311,46 @@ branch=main
 repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+## [2026-10-25T05:32:00+05:30] Review plan ordering before implementation
+
+User Prompt (verbatim, secrets redacted):
+@docs/data_findings.md (section a: ordering and dependency rules)
+Create code/plan.py. Show the DAG constraint list and the sort key as a plan BEFORE
+writing code, and wait for my approval.
+
+After approval, implement:
+- Map (rule action, resolved state) to FINDING / REMEDIATION / VERIFICATION using only
+  ALLOWED triples from schema.py.
+- Tombstone: REDACT but keep user_id; remove name, email, phone, email_hash.
+- Missing retained record, UNKNOWN, CONFLICT, UNCOVERED, UNLINKED_HIT: case is
+  UNRESOLVED and may never be COMPLETE.
+- Ordering: phase order; operation order from the constants; remediation dependency
+  constraints encoded as a DAG from the contract text; deterministic topological sort with
+  tie-break (operation order, system_id, resource_id); step_no = 1..N.
+- COMPLETE: verification steps only, each citing file_id/activity_id/audit_id.
+  INCOMPLETE: cited findings; remediation and future verification with evidence_id "".
+  NOT_APPLICABLE: [].
+- If a sample contradicts the encoded constraints, STOP and report it. Do not special-case.
+
+Add code/test_plan.py with pinned cases: flow disabled before delete; tombstone redacted
+not deleted; retained record never deleted; COMPLETE has no findings; ordering matches
+the constants.
+
+Then run on the 32 samples using gold labels' states as inputs ONLY inside the test
+harness, and diff the serialized steps against sample_output.csv. Print mismatches grouped
+by cause. Then stop.
+
+Agent Response Summary:
+Inspected the contract and ordering findings. The documented case_16 sample orders source account deletion before its downstream search copy, contradicting the dependency rule, so implementation was stopped pending clarification.
+
+Actions:
+* Read docs/data_findings.md, code/schema.py, problem_statement.md, AGENTS.md, and sample_output.csv.
+* No implementation files changed.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
