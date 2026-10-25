@@ -275,3 +275,39 @@ branch=main
 repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+## [2026-10-25T05:30:00+05:30] Record planning design tradeoffs
+
+User Prompt (verbatim, secrets redacted):
+Record these in code/README.md under "Design Tradeoffs" before the plan builder exists.
+Prose only, no code.
+
+DECISION 1: Code builds the plan from labeled items; the LLM never writes steps.
+ALTERNATIVE: One LLM call returning the full steps_json, with code only validating.
+WHY: The contract fixes phases, operation order, and citation rules, so deterministic
+serialization removes a class of order and format errors.
+COST: A wrong rule or state mapping mislabels a whole class of cases at once.
+HOW MEASURED: Config A (code-built steps) vs Config B (LLM-written steps), same
+retrieval, scored on the 32 samples. Primary metric is status accuracy, then step-level
+accuracy. Deltas under 10pp are within noise.
+
+DECISION 2: UNKNOWN state blocks COMPLETE and goes to the review loop; it is never read
+as ABSENT.
+WHY: Absence is hard to prove; a false COMPLETE is the costly error in this task.
+COST: Some cases that are really complete will be held back until evidence coverage
+improves.
+
+Write both, then stop.
+
+Agent Response Summary:
+Added both requested tradeoffs as prose under Design Tradeoffs without changing other project content.
+
+Actions:
+* Edited code/README.md.
+
+Context:
+tool=Codex
+model=GPT-6
+branch=main
+repo_root=C:\Users\krsat\Documents\Projetcs\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
